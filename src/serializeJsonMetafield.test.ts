@@ -15,14 +15,14 @@ describe("serializeJsonMetafield", () => {
 
 	it("should return a properly formatted JSON string for the corresponding simple input object", () => {
 		expect(serializeJsonMetafield(metafield_json_object_simple_expected)).toBe(
-			'{"key":"&A2:A&","value":"&A2:A&"}'
+			'{"key":"&A2:A&","keyTwo":"&A2:A&"}'
 		)
 	})
 
 	it("should return a properly formatted JSON string for the corresponding input object with one level of nesting", () => {
 		expect(
 			serializeJsonMetafield(metafield_json_object_one_level_nesting_expected)
-		).toBe('{"pricebooks":{"key":"&A2:A&","value":"&A2:A&"}}')
+		).toBe('{"pricebooks":{"key":"&A2:A&","keyTwo":"&A2:A&"}}')
 	})
 
 	it("should return a properly formatted JSON string for the corresponding input object with two levels of nesting", () => {

@@ -1,6 +1,6 @@
 const inputObject = {
-	key: "&A2:A&",
-	value: "&D2:D&",
+	["EUR.price"]: "&A2:A&",
+	["CAD.nprice"]: 123456,
 }
 
 export default inputObject

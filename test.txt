@@ -1,3 +1,7 @@
 Scotts example that works in Google Sheet: 
     
     "{""key"":"""&A2:A&""",""value"":"""&D2:D&"""}"
+
+This also worked in Google Sheet:
+
+    "{""key"":"&A2:A&",""value"":"&D2:D&"}"

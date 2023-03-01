@@ -9,16 +9,15 @@ export const serializeEscapedJsonMetafield = (
 			: typeof metafieldObject === "string"
 			? metafieldObject
 			: Object.entries(metafieldObject).reduce((acc, [k, v], i, arr) => {
-					if (typeof v !== "object" && typeof v !== "string") return ""
-
 					if (typeof v === "object") {
-						return `${acc}""${k}"":${serializeEscapedJsonMetafield(v)},`
+						const res = `${acc}""${k}"":${serializeEscapedJsonMetafield(v)}`
+
+						return isItemAtIndexLastInArray(i, arr) ? `${res}` : `${res},`
 					} else {
-						if (isItemAtIndexLastInArray(i, arr)) {
-							return `${acc}""${k}"":"""${v}"""`
-						} else {
-							return `${acc}""${k}"":"""${v}""",`
-						}
+						const val = String(v)
+						const res = `${acc}""${k}"":"""&${val}&"""`
+
+						return isItemAtIndexLastInArray(i, arr) ? `${res}` : `${res},`
 					}
 			  }, "")
 	}}`
