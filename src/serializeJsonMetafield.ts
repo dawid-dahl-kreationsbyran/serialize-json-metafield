@@ -1,4 +1,4 @@
-export const serializeJsonMetafield = (metafieldObject: object): string =>
+/* export const serializeJsonMetafield = (metafieldObject: object): string =>
 	typeof metafieldObject !== "object"
 		? "{}"
 		: Array.isArray(metafieldObject)
@@ -8,3 +8,4 @@ export const serializeJsonMetafield = (metafieldObject: object): string =>
 		: JSON.stringify(metafieldObject)
 
 export default serializeJsonMetafield
+ */
