@@ -15,7 +15,10 @@ export const serializeEscapedJsonMetafield = (
 						return isItemAtIndexLastInArray(i, arr) ? `${res}` : `${res},`
 					} else {
 						const val = String(v)
-						const res = `${acc}""${k}"":"""&${val}&"""`
+
+						const res = val.length
+							? `${acc}""${k}"":"""&${val}&"""`
+							: `${acc}""${k}"":""${val}""`
 
 						return isItemAtIndexLastInArray(i, arr) ? `${res}` : `${res},`
 					}
