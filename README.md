@@ -1,6 +1,6 @@
 # serialize-json-metafield
 
-Modify the object in inputObject.ts and save.
+Modify the object in ./src/inputObject.ts and save.
 
 In the terminal, run "npm start" with an argument that is either "eu", "na" or "apac". Like this:
 
